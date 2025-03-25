@@ -67,7 +67,9 @@ dependencies = [
     { name = "pyupgrade" },
     { name = "regex" },
     { name = "tqdm" },
+    { name = "types-regex" },
     { name = "types-setuptools" },
+    { name = "types-tqdm" },
 ]
 
 [package.optional-dependencies]
@@ -90,7 +92,9 @@ requires-dist = [
     { name = "pyupgrade", specifier = ">=3.15.0" },
     { name = "regex" },
     { name = "tqdm" },
+    { name = "types-regex", specifier = ">=2024.11.6.20250318" },
     { name = "types-setuptools", specifier = ">=75.8.0.20250110" },
+    { name = "types-tqdm", specifier = ">=4.67.0.20250319" },
 ]
 provides-extras = ["dev"]
 
@@ -364,6 +368,27 @@ wheels = [
 ]
 
 [[package]]
+name = "types-regex"
+version = "2024.11.6.20250318"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7b/75/c084b44acf13f9bd8a50bf4ab721ae3d40bad3bca3b4e46d038ac7015167/types_regex-2024.11.6.20250318.tar.gz", hash = "sha256:6d472d0acf37b138cb32f67bd5ab1e7a200e94da8c1aa93ca3625a63e2efe1f3", size = 12410 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/59/cf/a6271c99f392ac258e10d4fc78cf82537ca93ae2d1c35ff77e2187479962/types_regex-2024.11.6.20250318-py3-none-any.whl", hash = "sha256:9309fe5918ee7ffe859c04c18040697655fade366c4dc844bbebe86976a9980b", size = 10460 },
+]
+
+[[package]]
+name = "types-requests"
+version = "2.32.0.20250306"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/09/1a/beaeff79ef9efd186566ba5f0d95b44ae21f6d31e9413bcfbef3489b6ae3/types_requests-2.32.0.20250306.tar.gz", hash = "sha256:0962352694ec5b2f95fda877ee60a159abdf84a0fc6fdace599f20acb41a03d1", size = 23012 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/99/26/645d89f56004aa0ba3b96fec27793e3c7e62b40982ee069e52568922b6db/types_requests-2.32.0.20250306-py3-none-any.whl", hash = "sha256:25f2cbb5c8710b2022f8bbee7b2b66f319ef14aeea2f35d80f18c9dbf3b60a0b", size = 20673 },
+]
+
+[[package]]
 name = "types-setuptools"
 version = "76.0.0.20250313"
 source = { registry = "https://pypi.org/simple" }
@@ -376,12 +401,33 @@ wheels = [
 ]
 
 [[package]]
+name = "types-tqdm"
+version = "4.67.0.20250319"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "types-requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ea/67/0472ea7fc099eec5feb50d338190c3cd85e9cdc2cd0eefb0691c0ca1d80e/types_tqdm-4.67.0.20250319.tar.gz", hash = "sha256:ae947a64bd8d7ed7b7d2b7369df05f9181f847ec2828fdc8a2deb0bb8701adaa", size = 17195 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/68/44/e7621dd970476f25ef608a19b1ef1296deb9a8d8247adbc63cd503ed94f2/types_tqdm-4.67.0.20250319-py3-none-any.whl", hash = "sha256:8705ef0dd431586e5ea6e010e15b73389b09bcc18186e8c1f530a14dfaa30e09", size = 24285 },
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.12.2"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8", size = 85321 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
+]
+
+[[package]]
+name = "urllib3"
+version = "2.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/aa/63/e53da845320b757bf29ef6a9062f5c669fe997973f966045cb019c3f4b66/urllib3-2.3.0.tar.gz", hash = "sha256:f8c5449b3cf0861679ce7e0503c7b44b5ec981bec0d1d3795a07f1ba96f0204d", size = 307268 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c8/19/4ec628951a74043532ca2cf5d97b7b14863931476d117c471e8e2b1eb39f/urllib3-2.3.0-py3-none-any.whl", hash = "sha256:1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df", size = 128369 },
 ]
 
 [[package]]
