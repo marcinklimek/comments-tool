@@ -1,9 +1,13 @@
 # Comments Tool
 
+
+
+
 A Python tool for processing comments in C/C++ source files, with special support for handling Japanese text. This tool helps you identify, extract, and manage Japanese comments in your C/C++ codebase.
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Validate](https://github.com/marcinklimek/comments-tool/actions/workflows/validate.yml/badge.svg)](https://github.com/marcinklimek/comments-tool/actions/workflows/validate.yml)
 
 ## Features
 
