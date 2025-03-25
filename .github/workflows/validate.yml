@@ -1,0 +1,32 @@
+name: Validate Environment
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12.9'
+
+    - name: Install and set up UV and dependencies
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        uv venv
+        uv pip install pre-commit black flake8 mypy
+        uv run pre-commit install
+        uv run pre-commit install-hooks
+
+    - name: Run pre-commit hooks
+      run: uv run pre-commit run --all-files
+
+    - name: Run environment validation
+      run: uv run python scripts/validate_environment.py
